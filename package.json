@@ -1,0 +1,25 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "A personal website to show off Collin's amazo development skills",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wingedillidan/personal-website.git"
+  },
+  "author": "Collin McLean",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wingedillidan/personal-website/issues"
+  },
+  "homepage": "https://github.com/Wingedillidan/personal-website#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-sass": "^3.1.0"
+  }
+}
