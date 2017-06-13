@@ -1,8 +1,8 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
-
-gulp.task
+var browserSync = require('browser-sync').create();
+var pug = require('gulp-pug');
 
 gulp.task('sass', function () {
   return gulp.src('./sass/**/*.scss')
@@ -11,11 +11,25 @@ gulp.task('sass', function () {
       browsers: ['last 2 versions'],
       cascade: false
     }))
-    .pipe(gulp.dest('./build/css'));
+    .pipe(gulp.dest('./build/css'))
+    .pipe(browserSync.stream());
 });
 
-gulp.task('sass:watch', function () {
+gulp.task('pug', function () {
+	return gulp.src('./pug/**/*.pug')
+		.pipe(pug())
+		.pipe(gulp.dest('./build'));
+});
+
+gulp.task('serve', ['sass', 'pug'], function () {
+	browserSync.init({
+		server: "./build",
+		notify: "false",
+	});
+
   gulp.watch('./sass/**/*.scss', ['sass']);
+	gulp.watch('./pug/**/*.pug', ['pug']);
+	gulp.watch('./build/**/*.html').on('change', browserSync.reload);
 });
 
-gulp.task('default', ['sass', 'sass:watch'])
+gulp.task('default', ['serve']);
