@@ -30,6 +30,7 @@ gulp.task('serve', ['sass', 'pug'], function () {
   gulp.watch('./sass/**/*.scss', ['sass']);
 	gulp.watch('./pug/**/*.pug', ['pug']);
 	gulp.watch('./build/**/*.html').on('change', browserSync.reload);
+	gulp.watch('./build/js/**/*.js').on('change', browserSync.reload);
 });
 
 gulp.task('default', ['serve']);

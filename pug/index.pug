@@ -1,7 +1,12 @@
 html
 	head
-		link(rel="stylesheet", href="../css/index.css")
+		script(src="https://code.jquery.com/jquery-3.2.1.min.js")
+		script(src="js/index.js")
+		link(rel="stylesheet", href="css/index.css")
 	body
-		div(class="woah")
-			p(id="yay") woah
-			
+		div(class="main-hero")
+			div(class="main-hero--filter")
+				div(class="main-hero--video")
+					video(autoplay muted loop)
+						source(src="media/train-hero.mp4" type="video/mp4")
+		div(class="test")
