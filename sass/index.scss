@@ -30,6 +30,47 @@ html {
 	}
 }
 
-.test {
+nav {
+	height: 75px;
+	width: 100%;
+	background-color: #222255;
+	display: flex;
+	flex-direction: row;
+	transition: all 0.5s;
+
+	a {
+		text-decoration: none;
+		color: #ddd;
+	}
+
+	div {
+		padding: 10px;
+		display: flex;
+		height: calc(100% - 20px);
+		align-items: center;
+		transition: all 0.5s;
+
+		&:hover {
+			background-color: rgba(255, 255, 255, .2);
+			font-size: 18px;
+		}
+		p {
+			margin: 0;
+		}
+	}
+
+	.logo {
+		color: #ddd;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.test1 {
 	height: 100vh;
+	background-color: red;
+}
+.test2 {
+	height: 100vh;
+	background-color: blue;
 }

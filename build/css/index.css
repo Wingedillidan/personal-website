@@ -28,5 +28,47 @@ html {
     -webkit-transform: translate(-50%, -40%);
     transform: translate(-50%, -40%); }
 
-.test {
-  height: 100vh; }
+nav {
+  height: 75px;
+  width: 100%;
+  background-color: #222255;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s; }
+  nav a {
+    text-decoration: none;
+    color: #ddd; }
+  nav div {
+    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: calc(100% - 20px);
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s; }
+    nav div:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      font-size: 18px; }
+    nav div p {
+      margin: 0; }
+  nav .logo {
+    color: #ddd;
+    margin: 0;
+    padding: 0; }
+
+.test1 {
+  height: 100vh;
+  background-color: red; }
+
+.test2 {
+  height: 100vh;
+  background-color: blue; }
