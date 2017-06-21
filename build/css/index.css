@@ -1,6 +1,12 @@
+html {
+  font-family: sans-serif Ariel; }
+
 body {
   margin: 0;
   padding: 0; }
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0; }
 
 html {
   background-color: eee; }
@@ -40,12 +46,13 @@ nav {
   -ms-flex-direction: row;
   flex-direction: row;
   -webkit-transition: all 0.5s;
-  transition: all 0.5s; }
+  transition: all 0.5s;
+  z-index: 1; }
   nav a {
     text-decoration: none;
     color: #ddd; }
   nav div {
-    padding: 10px;
+    padding: 10px 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -62,12 +69,43 @@ nav {
       margin: 0; }
   nav .logo {
     color: #ddd;
-    margin: 0;
-    padding: 0; }
+    margin: 0; }
 
-.test1 {
-  height: 100vh;
-  background-color: red; }
+.about-me {
+  height: 250px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: left;
+  -ms-flex-align: left;
+  align-items: left;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .about-me div {
+    background-image: url("/media/placeholder1.jpg");
+    background-size: cover;
+    -webkit-filter: brightness(0.6);
+    filter: brightness(0.6);
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1; }
+  .about-me h1, .about-me p {
+    color: #ddd;
+    width: 350px;
+    margin-left: 10%; }
+  .about-me h1 {
+    font-size: 20px;
+    text-decoration: bold; }
 
 .test2 {
   height: 100vh;
